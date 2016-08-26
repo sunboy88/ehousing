@@ -1,0 +1,5 @@
+<extensionset name="ExtraWatch FREE" description="ExtraWatch FREE Updates">
+    <extension name="pkg_extrawatch" element="pkg_extrawatch" type="package" version="2.3.2650"
+               detailsurl="http://www.extrawatch.com/update/extrawatch/2.3/FREE/extrawatch-update.xml"/>
+
+</extensionset>

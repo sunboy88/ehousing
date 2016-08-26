@@ -1,0 +1,1156 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @file
+ * ExtraWatch - A real-time ajax monitor and live stats
+ * @package ExtraWatch
+ * @version 2.1
+ * @revision 917
+ * @license http://www.gnu.org/licenses/gpl-3.0.txt     GNU General Public License v3
+ * @copyright (C) 2014 by CodeGravity.com - All rights reserved!
+ * @website http://www.extrawatch.com
+ */
+-->
+<package>
+    <name>ExtraWatch</name>
+    <version>2.1.917</version>
+    <stability>beta</stability>
+    <license>GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>
+        ExtraWatch is a module ported from Joomla CMS that allows you to monitor your visitors in real-time.
+    </summary>
+    <description>
+		ExtraWatch is a module that allows you to watch<br/>
+        your website visitors and bots in real-time from the administration menu. Especially<br/>
+        their IP addresses, countries they come from, geographical location on a map, which<br/>
+        pages they are viewing, their browser and operating system, it creates daily and<br/>
+        all-time stats from these information plus unique, pageload and total hits statistics.<br/>
+        Furthermore, you can block harmful IP addresses, see blocked attempts stats, evaluate<br/>
+        the trend charts, and create goals based on many parameters. In the frontend, it can<br/>
+        show the top countries information and visit counts for certain periods of time.
+	</description>
+    <authors>
+        <author>
+            <name>Matto</name>
+            <user>matto3c</user>
+            <email>support@extrawatch.com</email>
+        </author>
+    </authors>
+    <date>2012-08-17</date>
+    <time>08:22:34</time>
+    <contents>
+        <target name="magecommunity">
+            <dir name="CodeGravity">
+                <dir name="ExtraWatch">
+                    <dir name="Block">
+                        <dir name="Adminhtml">
+                            <file name="ExtraWatch.php"/>
+                        </dir>
+                        <file name="ExtraWatch.php"/>
+                    </dir>
+                    <dir name="controllers">
+                        <dir name="Adminhtml">
+                            <file name="ExtrawatchController.php"/>
+                        </dir>
+                        <file name="IndexController.php"/>
+                    </dir>
+                    <dir name="etc">
+                        <file name="config.xml"/>
+                    </dir>
+                    <dir name="extrawatch">
+                        <dir name=".idea">
+                            <file name=".name"/>
+                            <file name="encodings.xml"/>
+                            <file name="extrawatch.iml"/>
+                            <file name="misc.xml"/>
+                            <file name="modules.xml"/>
+                            <dir name="scopes">
+                                <file name="scope_settings.xml"/>
+                            </dir>
+                            <file name="vcs.xml"/>
+                            <file name="workspace.xml"/>
+                        </dir>
+                        <dir name="administrator">
+                            <dir name="components">
+                                <dir name="com_extrawatch">
+                                    <file name="admin.extrawatch.php"/>
+                                    <file name="extrawatch-update.xml"/>
+                                    <file name="extrawatch.j15.xml"/>
+                                    <file name="extrawatch.xml"/>
+                                    <file name="index.html"/>
+                                    <file name="install.extrawatch.php"/>
+                                    <dir name="log">
+                                        <file name="index.html"/>
+                                    </dir>
+                                    <file name="pkg_ExtraWatch.xml"/>
+                                    <file name="security_certificate.pdf"/>
+                                    <dir name="sql">
+                                        <file name="index.html"/>
+                                        <file name="install.mysql.utf8.sql"/>
+                                    </dir>
+                                    <file name="uninstall.extrawatch.php"/>
+                                    <dir name="uninstall">
+                                        <file name="uninstall.php"/>
+                                    </dir>
+                                </dir>
+                            </dir>
+                        </dir>
+                        <dir name="components">
+                            <dir name="com_extrawatch">
+                                <dir name="ajax">
+                                    <file name=".htaccess"/>
+                                    <file name="img.php"/>
+                                    <file name="block.php"/>
+                                    <file name="heatmap.php"/>
+                                    <file name="index.html"/>
+                                    <file name="last.php"/>
+                                    <file name="lastvisit.php"/>
+                                    <file name="sizequery.php"/>
+                                    <file name="sizequerytotal.php"/>
+                                    <file name="stats.php"/>
+                                    <file name="tooltip.php"/>
+                                    <file name="trendtooltip.php"/>
+                                    <file name="vars.php"/>
+                                    <file name="visits.php"/>
+                                </dir>
+                                <dir name="build">
+                                    <file name="build.bat"/>
+                                    <file name="build.xml"/>
+                                    <file name="create_symlinks.bat"/>
+                                    <file name="switch_to_branch.bat"/>
+                                    <file name="switch_to_trunk.bat"/>
+                                </dir>
+                                <file name="config.php"/>
+                                <dir name="css">
+                                    <file name=".htaccess"/>
+                                    <file name="ajax-tooltip.css"/>
+                                    <file name="coda-slider.css"/>
+                                    <file name="extrawatch.css"/>
+                                    <file name="extrawatch.css.php"/>
+                                    <file name="general.css"/>
+                                    <dir name="images">
+                                        <file name="index.html"/>
+                                    </dir>
+                                    <file name="index.html"/>
+                                    <dir name="ui-lightness">
+                                        <file name="index.html"/>
+                                        <file name="jquery-ui-1.8.1.custom.css"/>
+                                    </dir>
+                                </dir>
+                                <dir name="img">
+                                    <dir name="flags">
+                                        <file name=".htaccess"/>
+                                        <file name="ad.png"/>
+                                        <file name="ae.png"/>
+                                        <file name="af.png"/>
+                                        <file name="ag.png"/>
+                                        <file name="ai.png"/>
+                                        <file name="al.png"/>
+                                        <file name="am.png"/>
+                                        <file name="an.png"/>
+                                        <file name="ao.png"/>
+                                        <file name="aq.png"/>
+                                        <file name="ar.png"/>
+                                        <file name="as.png"/>
+                                        <file name="at.png"/>
+                                        <file name="au.png"/>
+                                        <file name="aw.png"/>
+                                        <file name="ax.png"/>
+                                        <file name="az.png"/>
+                                        <file name="ba.png"/>
+                                        <file name="bb.png"/>
+                                        <file name="bd.png"/>
+                                        <file name="be.png"/>
+                                        <file name="bf.png"/>
+                                        <file name="bg.png"/>
+                                        <file name="bh.png"/>
+                                        <file name="bi.png"/>
+                                        <file name="bj.png"/>
+                                        <file name="bl.png"/>
+                                        <file name="bm.png"/>
+                                        <file name="bn.png"/>
+                                        <file name="bo.png"/>
+                                        <file name="br.png"/>
+                                        <file name="bs.png"/>
+                                        <file name="bt.png"/>
+                                        <file name="bv.png"/>
+                                        <file name="bw.png"/>
+                                        <file name="by.png"/>
+                                        <file name="bz.png"/>
+                                        <file name="ca.png"/>
+                                        <file name="cc.png"/>
+                                        <file name="cd.png"/>
+                                        <file name="cf.png"/>
+                                        <file name="cg.png"/>
+                                        <file name="ch.png"/>
+                                        <file name="ci.png"/>
+                                        <file name="ck.png"/>
+                                        <file name="cl.png"/>
+                                        <file name="cm.png"/>
+                                        <file name="cn.png"/>
+                                        <file name="co.png"/>
+                                        <file name="cr.png"/>
+                                        <file name="cs.png"/>
+                                        <file name="cu.png"/>
+                                        <file name="cv.png"/>
+                                        <file name="cx.png"/>
+                                        <file name="cy.png"/>
+                                        <file name="cz.png"/>
+                                        <file name="de.png"/>
+                                        <file name="dj.png"/>
+                                        <file name="dk.png"/>
+                                        <file name="dm.png"/>
+                                        <file name="do.png"/>
+                                        <file name="dz.png"/>
+                                        <file name="ec.png"/>
+                                        <file name="ee.png"/>
+                                        <file name="eg.png"/>
+                                        <file name="eh.png"/>
+                                        <file name="er.png"/>
+                                        <file name="es.png"/>
+                                        <file name="et.png"/>
+                                        <file name="fi.png"/>
+                                        <file name="fj.png"/>
+                                        <file name="fk.png"/>
+                                        <file name="fm.png"/>
+                                        <file name="fo.png"/>
+                                        <file name="fr.png"/>
+                                        <file name="fx.png"/>
+                                        <file name="ga.png"/>
+                                        <file name="gb.png"/>
+                                        <file name="gd.png"/>
+                                        <file name="ge.png"/>
+                                        <file name="gf.png"/>
+                                        <file name="gg.png"/>
+                                        <file name="gh.png"/>
+                                        <file name="gi.png"/>
+                                        <file name="gl.png"/>
+                                        <file name="gm.png"/>
+                                        <file name="gn.png"/>
+                                        <file name="gp.png"/>
+                                        <file name="gq.png"/>
+                                        <file name="gr.png"/>
+                                        <file name="gs.png"/>
+                                        <file name="gt.png"/>
+                                        <file name="gu.png"/>
+                                        <file name="gw.png"/>
+                                        <file name="gy.png"/>
+                                        <file name="hk.png"/>
+                                        <file name="hm.png"/>
+                                        <file name="hn.png"/>
+                                        <file name="hr.png"/>
+                                        <file name="ht.png"/>
+                                        <file name="hu.png"/>
+                                        <file name="id.png"/>
+                                        <file name="ie.png"/>
+                                        <file name="il.png"/>
+                                        <file name="in.png"/>
+                                        <file name="index.html"/>
+                                        <file name="io.png"/>
+                                        <file name="iq.png"/>
+                                        <file name="ir.png"/>
+                                        <file name="is.png"/>
+                                        <file name="it.png"/>
+                                        <file name="je.png"/>
+                                        <file name="jm.png"/>
+                                        <file name="jo.png"/>
+                                        <file name="jp.png"/>
+                                        <file name="ke.png"/>
+                                        <file name="kg.png"/>
+                                        <file name="kh.png"/>
+                                        <file name="ki.png"/>
+                                        <file name="km.png"/>
+                                        <file name="kn.png"/>
+                                        <file name="kp.png"/>
+                                        <file name="kr.png"/>
+                                        <file name="kw.png"/>
+                                        <file name="ky.png"/>
+                                        <file name="kz.png"/>
+                                        <file name="la.png"/>
+                                        <file name="lb.png"/>
+                                        <file name="lc.png"/>
+                                        <file name="li.png"/>
+                                        <file name="lk.png"/>
+                                        <file name="lr.png"/>
+                                        <file name="ls.png"/>
+                                        <file name="lt.png"/>
+                                        <file name="lu.png"/>
+                                        <file name="lv.png"/>
+                                        <file name="ly.png"/>
+                                        <file name="ma.png"/>
+                                        <file name="mc.png"/>
+                                        <file name="md.png"/>
+                                        <file name="me.png"/>
+                                        <file name="mf.png"/>
+                                        <file name="mg.png"/>
+                                        <file name="mh.png"/>
+                                        <file name="mk.png"/>
+                                        <file name="ml.png"/>
+                                        <file name="mm.png"/>
+                                        <file name="mn.png"/>
+                                        <file name="mo.png"/>
+                                        <file name="mp.png"/>
+                                        <file name="mq.png"/>
+                                        <file name="mr.png"/>
+                                        <file name="ms.png"/>
+                                        <file name="mt.png"/>
+                                        <file name="mu.png"/>
+                                        <file name="mv.png"/>
+                                        <file name="mw.png"/>
+                                        <file name="mx.png"/>
+                                        <file name="my.png"/>
+                                        <file name="mz.png"/>
+                                        <file name="na.png"/>
+                                        <file name="nc.png"/>
+                                        <file name="ne.png"/>
+                                        <file name="nf.png"/>
+                                        <file name="ng.png"/>
+                                        <file name="ni.png"/>
+                                        <file name="nl.png"/>
+                                        <file name="no.png"/>
+                                        <file name="none.png"/>
+                                        <file name="np.png"/>
+                                        <file name="nr.png"/>
+                                        <file name="nu.png"/>
+                                        <file name="nz.png"/>
+                                        <file name="om.png"/>
+                                        <file name="pa.png"/>
+                                        <file name="pe.png"/>
+                                        <file name="pf.png"/>
+                                        <file name="pg.png"/>
+                                        <file name="ph.png"/>
+                                        <file name="pk.png"/>
+                                        <file name="pl.png"/>
+                                        <file name="pm.png"/>
+                                        <file name="pn.png"/>
+                                        <file name="pr.png"/>
+                                        <file name="ps.png"/>
+                                        <file name="pt.png"/>
+                                        <file name="pw.png"/>
+                                        <file name="py.png"/>
+                                        <file name="qa.png"/>
+                                        <file name="re.png"/>
+                                        <file name="ro.png"/>
+                                        <file name="rs.png"/>
+                                        <file name="rs.woa.png"/>
+                                        <file name="ru.png"/>
+                                        <file name="rw.png"/>
+                                        <file name="sa.png"/>
+                                        <file name="sb.png"/>
+                                        <file name="sc.png"/>
+                                        <file name="sd.png"/>
+                                        <file name="se.png"/>
+                                        <file name="sg.png"/>
+                                        <file name="sh.png"/>
+                                        <file name="si.png"/>
+                                        <file name="sj.png"/>
+                                        <file name="sk.png"/>
+                                        <file name="sl.png"/>
+                                        <file name="sm.png"/>
+                                        <file name="sn.png"/>
+                                        <file name="so.png"/>
+                                        <file name="sr.png"/>
+                                        <file name="st.png"/>
+                                        <file name="sv.png"/>
+                                        <file name="sy.png"/>
+                                        <file name="sz.png"/>
+                                        <file name="tc.png"/>
+                                        <file name="td.png"/>
+                                        <file name="tf.png"/>
+                                        <file name="tg.png"/>
+                                        <file name="th.png"/>
+                                        <file name="tj.png"/>
+                                        <file name="tk.png"/>
+                                        <file name="tl.png"/>
+                                        <file name="tm.png"/>
+                                        <file name="tn.png"/>
+                                        <file name="to.png"/>
+                                        <file name="tp.png"/>
+                                        <file name="tr.png"/>
+                                        <file name="tt.png"/>
+                                        <file name="tv.png"/>
+                                        <file name="tw.png"/>
+                                        <file name="tz.png"/>
+                                        <file name="ua.png"/>
+                                        <file name="ug.png"/>
+                                        <file name="um.png"/>
+                                        <file name="us.png"/>
+                                        <file name="uy.png"/>
+                                        <file name="uz.png"/>
+                                        <file name="va.png"/>
+                                        <file name="vc.png"/>
+                                        <file name="ve.png"/>
+                                        <file name="vg.png"/>
+                                        <file name="vi.png"/>
+                                        <file name="vn.png"/>
+                                        <file name="vu.png"/>
+                                        <file name="wf.png"/>
+                                        <file name="ws.png"/>
+                                        <file name="xt.png"/>
+                                        <file name="xx.png"/>
+                                        <file name="ye.png"/>
+                                        <file name="yt.png"/>
+                                        <file name="yu.png"/>
+                                        <file name="za.png"/>
+                                        <file name="zm.png"/>
+                                        <file name="zw.png"/>
+                                    </dir>
+                                    <dir name="icons">
+                                        <file name=".htaccess"/>
+                                        <file name="antispam.gif"/>
+                                        <file name="antispam.png"/>
+                                        <file name="blank.gif"/>
+                                        <file name="block.png"/>
+                                        <file name="bsd.gif"/>
+                                        <file name="calendar.gif"/>
+                                        <file name="chrome.gif"/>
+                                        <file name="click.png"/>
+                                        <file name="collapse.gif"/>
+                                        <file name="credits-background.png"/>
+                                        <file name="credits.png"/>
+                                        <file name="delete.gif"/>
+                                        <file name="edit.gif"/>
+                                        <file name="emails.png"/>
+                                        <file name="expand.gif"/>
+                                        <file name="explorer.gif"/>
+                                        <file name="external.gif"/>
+                                        <file name="extrawatch-demo-pro.png"/>
+                                        <file name="extrawatch-logo-1.2.11.png"/>
+                                        <file name="extrawatch-logo-16x16-blank.gif"/>
+                                        <file name="extrawatch-logo-16x16.gif"/>
+                                        <file name="extrawatch-logo-16x16.png"/>
+                                        <file name="extrawatch-logo-32x32.gif"/>
+                                        <file name="extrawatch-logo-48x48.gif"/>
+                                        <file name="extrawatch-logo-48x48.png"/>
+                                        <file name="extrawatch-logo.png"/>
+                                        <file name="firefox.gif"/>
+                                        <file name="flow.png"/>
+                                        <file name="goal.gif"/>
+                                        <file name="heatmap.png"/>
+                                        <file name="help.gif"/>
+                                        <file name="history.png"/>
+                                        <file name="hsv.png"/>
+                                        <file name="index.html"/>
+                                        <file name="license.png"/>
+                                        <file name="linux.gif"/>
+                                        <file name="mac.gif"/>
+                                        <file name="map_icon.gif"/>
+                                        <file name="mozilla.gif"/>
+                                        <file name="new.gif"/>
+                                        <file name="goals-export.gif"/>
+                                        <file name="goals-import.gif"/>
+                                        <file name="opera.gif"/>
+                                        <file name="palm.gif"/>
+                                        <file name="print.gif"/>
+                                        <file name="progress_bar.gif"/>
+                                        <file name="progress_bar_hits.gif"/>
+                                        <file name="progress_bar_loads.gif"/>
+                                        <file name="progress_bar_unique.gif"/>
+                                        <file name="progress_bar_vertical.gif"/>
+                                        <file name="progress_bar_vertical_faded.gif"/>
+                                        <file name="progress_bar_vertical_wide.gif"/>
+                                        <file name="published.png"/>
+                                        <file name="refresh.png"/>
+                                        <file name="refresh_all.png"/>
+                                        <file name="reload.gif"/>
+                                        <file name="safari.gif"/>
+                                        <file name="seo.png"/>
+                                        <file name="settings.gif"/>
+                                        <file name="sizes.png"/>
+                                        <file name="status.png"/>
+                                        <file name="submit.png"/>
+                                        <file name="sun.gif"/>
+                                        <file name="tab-none.gif"/>
+                                        <file name="tab-off.gif"/>
+                                        <file name="tab-on.gif"/>
+                                        <file name="Thumbs.db"/>
+                                        <file name="tick.png"/>
+                                        <file name="trend_gray.gif"/>
+                                        <file name="trend_green.gif"/>
+                                        <file name="trend_icon.gif"/>
+                                        <file name="trend_icon.png"/>
+                                        <file name="trend_red.gif"/>
+                                        <file name="unknown-os.gif"/>
+                                        <file name="unpublished.png"/>
+                                        <file name="update.png"/>
+                                        <file name="windows.gif"/>
+                                        <file name="windows7.gif"/>
+                                        <file name="windows98.gif"/>
+                                        <file name="windowsnt.gif"/>
+                                        <file name="windowsvista.gif"/>
+                                        <file name="windowsxp.gif"/>
+                                        <file name="click-disabled.png"/>
+                                        <file name="flow-disabled.png"/>
+                                        <file name="seo-disabled.png"/>
+                                        <file name="sizes-disabled.png"/>
+                                        <file name="status-disabled.png"/>
+                                    </dir>
+                                    <file name="index.html"/>
+                                </dir>
+                                <file name="includes.php"/>
+                                <file name="index.html"/>
+                                <file name="INSTALL.txt"/>
+                                <dir name="js">
+                                    <file name=".htaccess"/>
+                                    <file name="ajax-dynamic-content.js"/>
+                                    <file name="ajax.js"/>
+                                    <file name="coda-slider.1.1.1.js"/>
+                                    <file name="extrawatch.js.php"/>
+                                    <file name="fade.js"/>
+                                    <dir name="heatmap">
+                                        <file name="heatmap.js"/>
+                                        <file name="index.html"/>
+                                    </dir>
+                                    <file name="heatmap.js.php"/>
+                                    <file name="index.html"/>
+                                    <file name="jdownloadurl.js"/>
+                                    <file name="jquery-1.4.2.min.js"/>
+                                    <file name="jquery-easing-compatibility.1.2.js"/>
+                                    <file name="jquery-easing.1.2.js"/>
+                                    <file name="jquery-ui-1.8.1.custom.min.js"/>
+                                    <file name="jquery.js"/>
+                                    <file name="jxml.js"/>
+                                    <file name="maps.js.php"/>
+                                    <dir name="OpenLayers">
+                                        <dir name="img">
+                                            <file name="east-mini.png"/>
+                                            <file name="index.html"/>
+                                            <file name="marker.png"/>
+                                            <file name="north-mini.png"/>
+                                            <file name="slider.png"/>
+                                            <file name="south-mini.png"/>
+                                            <file name="west-mini.png"/>
+                                            <file name="zoom-minus-mini.png"/>
+                                            <file name="zoom-plus-mini.png"/>
+                                            <file name="zoom-world-mini.png"/>
+                                        </dir>
+                                        <file name="index.html"/>
+                                        <file name="OpenLayers.js"/>
+                                        <dir name="theme">
+                                            <dir name="default">
+                                                <file name="index.html"/>
+                                                <file name="style.css"/>
+                                            </dir>
+                                            <file name="index.html"/>
+                                        </dir>
+                                    </dir>
+                                    <dir name="springy">
+                                        <file name="index.html"/>
+                                        <file name="LICENSE"/>
+                                        <file name="springy.js"/>
+                                        <file name="springyui.js"/>
+                                    </dir>
+                                </dir>
+                                <dir name="lang">
+                                    <file name="albanian.php"/>
+                                    <file name="arabic.utf-8.php"/>
+                                    <file name="bengali.utf-8.php"/>
+                                    <file name="brazilian.portuguese.utf-8.php"/>
+                                    <file name="bulgarian.iso8859-5.php"/>
+                                    <file name="bulgarian.utf-8.php"/>
+                                    <file name="chinese-simplified.utf-8.php"/>
+                                    <file name="chinese-traditional.utf-8.php"/>
+                                    <file name="croatian.php"/>
+                                    <file name="czech.utf-8.php"/>
+                                    <file name="danish.utf-8.php"/>
+                                    <file name="dutch.php"/>
+                                    <file name="english.php"/>
+                                    <file name="estonian.php"/>
+                                    <file name="estonian.utf-8.php"/>
+                                    <file name="farsi.utf-8.php"/>
+                                    <file name="french.utf-8.php"/>
+                                    <file name="german.utf-8.php"/>
+                                    <file name="greek.utf-8.php"/>
+                                    <file name="hebrew.utf-8.php"/>
+                                    <file name="hindi.utf-8.php"/>
+                                    <file name="hungarian.utf-8.php"/>
+                                    <file name="index.html"/>
+                                    <file name="indonesian.php"/>
+                                    <file name="italian.utf-8.php"/>
+                                    <file name="japanese.utf-8.php"/>
+                                    <file name="latvian.utf-8.php"/>
+                                    <file name="lithuanian.utf-8.php"/>
+                                    <file name="macedonian.utf-8.php"/>
+                                    <file name="polish.utf-8.php"/>
+                                    <file name="romanian.utf-8.php"/>
+                                    <file name="russian.cp1251.php"/>
+                                    <file name="russian.utf-8.php"/>
+                                    <file name="serbian.utf-8.php"/>
+                                    <file name="slovak.iso8859-2.php"/>
+                                    <file name="slovak.utf-8.php"/>
+                                    <file name="slovenian.utf-8.php"/>
+                                    <file name="spanish.utf-8.php"/>
+                                    <file name="swedish.utf-8.php"/>
+                                    <file name="turkish.utf-8.php"/>
+                                    <file name="ukrainian.cp1251.php"/>
+                                    <file name="ukrainian.utf-8.php"/>
+                                    <file name="urdu.utf-8.php"/>
+                                    <file name="vietnamese.utf-8.php"/>
+                                </dir>
+                                <file name="LICENSE.txt"/>
+                                <dir name="log">
+                                    <file name="extrawatch.log.php"/>
+                                    <file name="index.html"/>
+                                </dir>
+                                <file name="README.txt"/>
+                                <dir name="sql">
+                                    <file name="csv2sql.php"/>
+                                    <file name="extrawatch-1.sql"/>
+                                    <file name="extrawatch-10.sql"/>
+                                    <file name="extrawatch-100.sql"/>
+                                    <file name="extrawatch-101.sql"/>
+                                    <file name="extrawatch-102.sql"/>
+                                    <file name="extrawatch-103.sql"/>
+                                    <file name="extrawatch-104.sql"/>
+                                    <file name="extrawatch-105.sql"/>
+                                    <file name="extrawatch-106.sql"/>
+                                    <file name="extrawatch-107.sql"/>
+                                    <file name="extrawatch-108.sql"/>
+                                    <file name="extrawatch-109.sql"/>
+                                    <file name="extrawatch-11.sql"/>
+                                    <file name="extrawatch-110.sql"/>
+                                    <file name="extrawatch-111.sql"/>
+                                    <file name="extrawatch-112.sql"/>
+                                    <file name="extrawatch-113.sql"/>
+                                    <file name="extrawatch-114.sql"/>
+                                    <file name="extrawatch-115.sql"/>
+                                    <file name="extrawatch-116.sql"/>
+                                    <file name="extrawatch-117.sql"/>
+                                    <file name="extrawatch-118.sql"/>
+                                    <file name="extrawatch-119.sql"/>
+                                    <file name="extrawatch-12.sql"/>
+                                    <file name="extrawatch-120.sql"/>
+                                    <file name="extrawatch-121.sql"/>
+                                    <file name="extrawatch-122.sql"/>
+                                    <file name="extrawatch-123.sql"/>
+                                    <file name="extrawatch-124.sql"/>
+                                    <file name="extrawatch-125.sql"/>
+                                    <file name="extrawatch-126.sql"/>
+                                    <file name="extrawatch-127.sql"/>
+                                    <file name="extrawatch-128.sql"/>
+                                    <file name="extrawatch-129.sql"/>
+                                    <file name="extrawatch-13.sql"/>
+                                    <file name="extrawatch-130.sql"/>
+                                    <file name="extrawatch-131.sql"/>
+                                    <file name="extrawatch-132.sql"/>
+                                    <file name="extrawatch-133.sql"/>
+                                    <file name="extrawatch-134.sql"/>
+                                    <file name="extrawatch-135.sql"/>
+                                    <file name="extrawatch-136.sql"/>
+                                    <file name="extrawatch-137.sql"/>
+                                    <file name="extrawatch-138.sql"/>
+                                    <file name="extrawatch-139.sql"/>
+                                    <file name="extrawatch-14.sql"/>
+                                    <file name="extrawatch-140.sql"/>
+                                    <file name="extrawatch-141.sql"/>
+                                    <file name="extrawatch-142.sql"/>
+                                    <file name="extrawatch-143.sql"/>
+                                    <file name="extrawatch-144.sql"/>
+                                    <file name="extrawatch-145.sql"/>
+                                    <file name="extrawatch-146.sql"/>
+                                    <file name="extrawatch-147.sql"/>
+                                    <file name="extrawatch-148.sql"/>
+                                    <file name="extrawatch-149.sql"/>
+                                    <file name="extrawatch-15.sql"/>
+                                    <file name="extrawatch-150.sql"/>
+                                    <file name="extrawatch-151.sql"/>
+                                    <file name="extrawatch-152.sql"/>
+                                    <file name="extrawatch-153.sql"/>
+                                    <file name="extrawatch-154.sql"/>
+                                    <file name="extrawatch-155.sql"/>
+                                    <file name="extrawatch-156.sql"/>
+                                    <file name="extrawatch-157.sql"/>
+                                    <file name="extrawatch-158.sql"/>
+                                    <file name="extrawatch-159.sql"/>
+                                    <file name="extrawatch-16.sql"/>
+                                    <file name="extrawatch-160.sql"/>
+                                    <file name="extrawatch-161.sql"/>
+                                    <file name="extrawatch-162.sql"/>
+                                    <file name="extrawatch-163.sql"/>
+                                    <file name="extrawatch-164.sql"/>
+                                    <file name="extrawatch-165.sql"/>
+                                    <file name="extrawatch-166.sql"/>
+                                    <file name="extrawatch-167.sql"/>
+                                    <file name="extrawatch-168.sql"/>
+                                    <file name="extrawatch-169.sql"/>
+                                    <file name="extrawatch-17.sql"/>
+                                    <file name="extrawatch-170.sql"/>
+                                    <file name="extrawatch-171.sql"/>
+                                    <file name="extrawatch-172.sql"/>
+                                    <file name="extrawatch-173.sql"/>
+                                    <file name="extrawatch-174.sql"/>
+                                    <file name="extrawatch-175.sql"/>
+                                    <file name="extrawatch-176.sql"/>
+                                    <file name="extrawatch-177.sql"/>
+                                    <file name="extrawatch-178.sql"/>
+                                    <file name="extrawatch-179.sql"/>
+                                    <file name="extrawatch-18.sql"/>
+                                    <file name="extrawatch-180.sql"/>
+                                    <file name="extrawatch-181.sql"/>
+                                    <file name="extrawatch-182.sql"/>
+                                    <file name="extrawatch-183.sql"/>
+                                    <file name="extrawatch-184.sql"/>
+                                    <file name="extrawatch-185.sql"/>
+                                    <file name="extrawatch-186.sql"/>
+                                    <file name="extrawatch-187.sql"/>
+                                    <file name="extrawatch-188.sql"/>
+                                    <file name="extrawatch-189.sql"/>
+                                    <file name="extrawatch-19.sql"/>
+                                    <file name="extrawatch-190.sql"/>
+                                    <file name="extrawatch-191.sql"/>
+                                    <file name="extrawatch-192.sql"/>
+                                    <file name="extrawatch-193.sql"/>
+                                    <file name="extrawatch-194.sql"/>
+                                    <file name="extrawatch-195.sql"/>
+                                    <file name="extrawatch-196.sql"/>
+                                    <file name="extrawatch-197.sql"/>
+                                    <file name="extrawatch-198.sql"/>
+                                    <file name="extrawatch-199.sql"/>
+                                    <file name="extrawatch-2.sql"/>
+                                    <file name="extrawatch-20.sql"/>
+                                    <file name="extrawatch-200.sql"/>
+                                    <file name="extrawatch-201.sql"/>
+                                    <file name="extrawatch-202.sql"/>
+                                    <file name="extrawatch-203.sql"/>
+                                    <file name="extrawatch-204.sql"/>
+                                    <file name="extrawatch-205.sql"/>
+                                    <file name="extrawatch-206.sql"/>
+                                    <file name="extrawatch-207.sql"/>
+                                    <file name="extrawatch-208.sql"/>
+                                    <file name="extrawatch-209.sql"/>
+                                    <file name="extrawatch-21.sql"/>
+                                    <file name="extrawatch-210.sql"/>
+                                    <file name="extrawatch-211.sql"/>
+                                    <file name="extrawatch-212.sql"/>
+                                    <file name="extrawatch-213.sql"/>
+                                    <file name="extrawatch-214.sql"/>
+                                    <file name="extrawatch-215.sql"/>
+                                    <file name="extrawatch-216.sql"/>
+                                    <file name="extrawatch-217.sql"/>
+                                    <file name="extrawatch-218.sql"/>
+                                    <file name="extrawatch-219.sql"/>
+                                    <file name="extrawatch-22.sql"/>
+                                    <file name="extrawatch-220.sql"/>
+                                    <file name="extrawatch-23.sql"/>
+                                    <file name="extrawatch-24.sql"/>
+                                    <file name="extrawatch-25.sql"/>
+                                    <file name="extrawatch-26.sql"/>
+                                    <file name="extrawatch-27.sql"/>
+                                    <file name="extrawatch-28.sql"/>
+                                    <file name="extrawatch-29.sql"/>
+                                    <file name="extrawatch-3.sql"/>
+                                    <file name="extrawatch-30.sql"/>
+                                    <file name="extrawatch-31.sql"/>
+                                    <file name="extrawatch-32.sql"/>
+                                    <file name="extrawatch-33.sql"/>
+                                    <file name="extrawatch-34.sql"/>
+                                    <file name="extrawatch-35.sql"/>
+                                    <file name="extrawatch-36.sql"/>
+                                    <file name="extrawatch-37.sql"/>
+                                    <file name="extrawatch-38.sql"/>
+                                    <file name="extrawatch-39.sql"/>
+                                    <file name="extrawatch-4.sql"/>
+                                    <file name="extrawatch-40.sql"/>
+                                    <file name="extrawatch-41.sql"/>
+                                    <file name="extrawatch-42.sql"/>
+                                    <file name="extrawatch-43.sql"/>
+                                    <file name="extrawatch-44.sql"/>
+                                    <file name="extrawatch-45.sql"/>
+                                    <file name="extrawatch-46.sql"/>
+                                    <file name="extrawatch-47.sql"/>
+                                    <file name="extrawatch-48.sql"/>
+                                    <file name="extrawatch-49.sql"/>
+                                    <file name="extrawatch-5.sql"/>
+                                    <file name="extrawatch-50.sql"/>
+                                    <file name="extrawatch-51.sql"/>
+                                    <file name="extrawatch-52.sql"/>
+                                    <file name="extrawatch-53.sql"/>
+                                    <file name="extrawatch-54.sql"/>
+                                    <file name="extrawatch-55.sql"/>
+                                    <file name="extrawatch-56.sql"/>
+                                    <file name="extrawatch-57.sql"/>
+                                    <file name="extrawatch-58.sql"/>
+                                    <file name="extrawatch-59.sql"/>
+                                    <file name="extrawatch-6.sql"/>
+                                    <file name="extrawatch-60.sql"/>
+                                    <file name="extrawatch-61.sql"/>
+                                    <file name="extrawatch-62.sql"/>
+                                    <file name="extrawatch-63.sql"/>
+                                    <file name="extrawatch-64.sql"/>
+                                    <file name="extrawatch-65.sql"/>
+                                    <file name="extrawatch-66.sql"/>
+                                    <file name="extrawatch-67.sql"/>
+                                    <file name="extrawatch-68.sql"/>
+                                    <file name="extrawatch-69.sql"/>
+                                    <file name="extrawatch-7.sql"/>
+                                    <file name="extrawatch-70.sql"/>
+                                    <file name="extrawatch-71.sql"/>
+                                    <file name="extrawatch-72.sql"/>
+                                    <file name="extrawatch-73.sql"/>
+                                    <file name="extrawatch-74.sql"/>
+                                    <file name="extrawatch-75.sql"/>
+                                    <file name="extrawatch-76.sql"/>
+                                    <file name="extrawatch-77.sql"/>
+                                    <file name="extrawatch-78.sql"/>
+                                    <file name="extrawatch-79.sql"/>
+                                    <file name="extrawatch-8.sql"/>
+                                    <file name="extrawatch-80.sql"/>
+                                    <file name="extrawatch-81.sql"/>
+                                    <file name="extrawatch-82.sql"/>
+                                    <file name="extrawatch-83.sql"/>
+                                    <file name="extrawatch-84.sql"/>
+                                    <file name="extrawatch-85.sql"/>
+                                    <file name="extrawatch-86.sql"/>
+                                    <file name="extrawatch-87.sql"/>
+                                    <file name="extrawatch-88.sql"/>
+                                    <file name="extrawatch-89.sql"/>
+                                    <file name="extrawatch-9.sql"/>
+                                    <file name="extrawatch-90.sql"/>
+                                    <file name="extrawatch-91.sql"/>
+                                    <file name="extrawatch-92.sql"/>
+                                    <file name="extrawatch-93.sql"/>
+                                    <file name="extrawatch-94.sql"/>
+                                    <file name="extrawatch-95.sql"/>
+                                    <file name="extrawatch-96.sql"/>
+                                    <file name="extrawatch-97.sql"/>
+                                    <file name="extrawatch-98.sql"/>
+                                    <file name="extrawatch-99.sql"/>
+                                    <file name="index.html"/>
+                                    <file name="install.mysql.utf8.sql"/>
+                                </dir>
+                                <dir name="src">
+                                    <file name="class.extrawatch.block.php"/>
+                                    <file name="class.extrawatch.cache.php"/>
+                                    <file name="class.extrawatch.config.php"/>
+                                    <file name="class.extrawatch.date.php"/>
+                                    <file name="class.extrawatch.db.php"/>
+                                    <file name="class.extrawatch.flow.php"/>
+                                    <file name="class.extrawatch.goal.php"/>
+                                    <file name="class.extrawatch.heatmap.php"/>
+                                    <file name="class.extrawatch.helper.php"/>
+                                    <file name="class.extrawatch.log.php"/>
+                                    <file name="class.extrawatch.php"/>
+                                    <file name="class.extrawatch.seo.php"/>
+                                    <file name="class.extrawatch.sizes.php"/>
+                                    <file name="class.extrawatch.stat.php"/>
+                                    <file name="class.extrawatch.visit.history.php"/>
+                                    <file name="class.extrawatch.visit.php"/>
+                                    <file name="class.ip2country.php"/>
+                                    <file name="class.ipinfodb.php"/>
+                                    <dir name="env">
+                                        <file name="class.extrawatch.env.factory.php"/>
+                                        <file name="class.extrawatch.env.request.php"/>
+                                        <dir name="drupal">
+                                            <file name="class.extrawatch.db.drupal.php"/>
+                                            <file name="class.extrawatch.env.drupal.php"/>
+                                            <file name="class.extrawatch.user.drupal.php"/>
+                                            <file name="extrawatch.admin.inc"/>
+                                            <file name="index.html"/>
+                                            <dir name="module">
+                                                <file name="extrawatch.info"/>
+                                                <file name="extrawatch.module"/>
+                                                <file name="index.html"/>
+                                            </dir>
+                                        </dir>
+                                        <file name="index.html"/>
+                                        <file name="interface.extrawatch.dbwrap.php"/>
+                                        <file name="interface.extrawatch.env.php"/>
+                                        <file name="interface.extrawatch.setup.php"/>
+                                        <file name="interface.extrawatch.user.php"/>
+                                        <dir name="joomla">
+                                            <file name="class.extrawatch.db.joomla.php"/>
+                                            <file name="class.extrawatch.env.joomla.php"/>
+                                            <file name="class.extrawatch.setup.joomla.php"/>
+                                            <file name="index.html"/>
+                                        </dir>
+                                        <dir name="magento">
+                                            <dir name="app">
+                                                <file name=".htaccess"/>
+                                                <dir name="code">
+                                                    <dir name="communit">
+                                                        <dir name="CodeGravity">
+                                                            <dir name="Extrawatch">
+                                                                <dir name="Block">
+                                                                    <dir name="Adminhtml">
+                                                                        <dir name="Dashboard">
+                                                                            <file name="Index.php"/>
+                                                                        </dir>
+                                                                        <file name="ExtraWatch.php"/>
+                                                                    </dir>
+                                                                    <file name="ExtraWatch.php"/>
+                                                                </dir>
+                                                                <dir name="controllers">
+                                                                    <dir name="Adminhtml">
+                                                                        <file name="Controller.php"/>
+                                                                        <file name="ExtraWatchController.php"/>
+                                                                    </dir>
+                                                                    <file name="Controller.php"/>
+                                                                    <file name="IndexController.php"/>
+                                                                </dir>
+                                                                <dir name="etc">
+                                                                    <file name="config.xml"/>
+                                                                </dir>
+                                                                <dir name="Helper">
+                                                                    <file name="Data.php"/>
+                                                                </dir>
+                                                                <dir name="Model">
+                                                                    <file name="ExtraWatch.php"/>
+                                                                    <dir name="Mysql4">
+                                                                        <dir name="ExtraWatch">
+                                                                            <file name="Collection.php"/>
+                                                                        </dir>
+                                                                        <file name="ExtraWatch.php"/>
+                                                                    </dir>
+                                                                    <file name="Status.php"/>
+                                                                </dir>
+                                                                <dir name="sql">
+                                                                    <dir name="extrawatch_setup">
+                                                                        <file name="mysql4-install-0.1.0.php"/>
+                                                                    </dir>
+                                                                </dir>
+                                                            </dir>
+                                                        </dir>
+                                                    </dir>
+                                                </dir>
+                                                <dir name="design">
+                                                    <dir name="adminhtml">
+                                                        <dir name="default">
+                                                            <dir name="default">
+                                                                <dir name="layout">
+                                                                    <file name="extrawatch.xml"/>
+                                                                </dir>
+                                                                <dir name="template">
+                                                                    <dir name="extrawatch">
+                                                                        <file name="dashboard.phtml"/>
+                                                                        <file name="dashboard_button.phtml"/>
+                                                                        <file name="dashboard_create.phtml"/>
+                                                                        <file name="dashboard_create_error.phtml"/>
+                                                                        <file name="dashboard_create_success.phtml"/>
+                                                                        <file name="dashboard_reconnect.phtml"/>
+                                                                        <file name="dashboard_reconnect_success.phtml"/>
+                                                                        <file name="personal_assistant.phtml"/>
+                                                                    </dir>
+                                                                </dir>
+                                                            </dir>
+                                                        </dir>
+                                                        <dir name="extrawatch">
+                                                            <dir name="extrawatch">
+                                                                <dir name="layout">
+                                                                    <file name="extrawatch.xml"/>
+                                                                </dir>
+                                                            </dir>
+                                                        </dir>
+                                                    </dir>
+                                                </dir>
+                                                <dir name="etc">
+                                                    <dir name="modules">
+                                                        <file name="CodeGravity_ExtraWatch.xml"/>
+                                                    </dir>
+                                                </dir>
+                                            </dir>
+                                            <file name="class.extrawatch.db.magento.php"/>
+                                            <file name="class.extrawatch.env.magento.php"/>
+                                            <file name="class.extrawatch.user.magento.php"/>
+                                            <file name="package.xml"/>
+                                        </dir>
+                                        <dir name="nocms">
+                                            <dir name="admin">
+                                                <dir name="img">
+                                                    <file name="backend.png"/>
+                                                    <file name="extrawatch-logo.png"/>
+                                                    <file name="index.html"/>
+                                                </dir>
+                                                <file name="index.html"/>
+                                                <file name="index.php"/>
+                                                <file name="login.html"/>
+                                            </dir>
+                                            <file name="class.extrawatch.db.nocms.php"/>
+                                            <file name="class.extrawatch.env.nocms.php"/>
+                                            <file name="class.extrawatch.user.nocms.php"/>
+                                            <file name="index.html"/>
+                                        </dir>
+                                        <dir name="wordpress">
+                                            <file name="class.extrawatch.db.wordpress.php"/>
+                                            <file name="class.extrawatch.env.wordpress.php"/>
+                                            <file name="class.extrawatch.setup.wordpress.php"/>
+                                            <file name="extrawatch.php"/>
+                                            <file name="index.html"/>
+                                            <file name="readme.txt"/>
+                                            <dir name="widget">
+                                                <file name="class.extrawatch.agent.widget.php"/>
+                                                <file name="class.extrawatch.users.widget.php"/>
+                                                <file name="class.extrawatch.visitors.widget.php"/>
+                                            </dir>
+                                        </dir>
+                                        <dir name="prestashop">
+                                            <file name="class.extrawatch.db.prestashop.php"/>
+                                            <file name="class.extrawatch.env.prestashop.php"/>
+                                            <file name="index.html"/>
+                                        </dir>
+                                    </dir>
+                                    <dir name="html">
+                                        <file name="admin.extrawatch.html.php"/>
+                                        <file name="class.extrawatch.block.html.php"/>
+                                        <file name="class.extrawatch.flow.html.php"/>
+                                        <file name="class.extrawatch.goal.html.php"/>
+                                        <file name="class.extrawatch.heatmap.html.php"/>
+                                        <file name="class.extrawatch.html.php"/>
+                                        <file name="class.extrawatch.seo.html.php"/>
+                                        <file name="class.extrawatch.stat.html.php"/>
+                                        <file name="class.extrawatch.trend.html.php"/>
+                                        <file name="class.extrawatch.visit.history.html.php"/>
+                                        <file name="class.extrawatch.visit.html.php"/>
+                                        <file name="index.html"/>
+                                    </dir>
+                                    <file name="inc.extrawatch.env.php"/>
+                                    <file name="index.html"/>
+                                </dir>
+                                <file name="TERMS_AND_CONDITIONS.txt"/>
+                                <file name="timezone.php"/>
+                                <dir name="view">
+                                    <file name="adminbody.php"/>
+                                    <file name="adminheader.php"/>
+                                    <file name="adminstyles.php"/>
+                                    <file name="antispam.php"/>
+                                    <file name="credits.php"/>
+                                    <file name="datecontrol.php"/>
+                                    <file name="datecontrolget.php"/>
+                                    <file name="emails.php"/>
+                                    <file name="exportxml.php"/>
+                                    <file name="flow.php"/>
+                                    <file name="frame.php"/>
+                                    <file name="goal.php"/>
+                                    <file name="goals.php"/>
+                                    <file name="heatmap.php"/>
+                                    <file name="history.php"/>
+                                    <file name="importxml.php"/>
+                                    <file name="index.html"/>
+                                    <file name="lastvisitmap.php"/>
+                                    <file name="license-commercial.php"/>
+                                    <file name="license-free.php"/>
+                                    <file name="license.php"/>
+                                    <file name="menu.php"/>
+                                    <file name="navigation.php"/>
+                                    <file name="seo.php"/>
+                                    <file name="settings.php"/>
+                                    <file name="sizecomponents.php"/>
+                                    <file name="sizedatabase.php"/>
+                                    <file name="sizemodules.php"/>
+                                    <file name="sizes.php"/>
+                                    <file name="stats-footer.php"/>
+                                    <file name="stats-header.php"/>
+                                    <file name="stats-today.php"/>
+                                    <file name="stats-total.php"/>
+                                    <file name="status.php"/>
+                                    <file name="topkeyphrases.php"/>
+                                    <file name="toprefered.php"/>
+                                    <file name="trendtooltip.php"/>
+                                    <file name="update.php"/>
+                                    <file name="visits.php"/>
+                                </dir>
+                            </dir>
+                        </dir>
+                        <dir name="modules">
+                            <dir name="mod_extrawatch_agent">
+                                <file name="index.html"/>
+                                <file name="mod_extrawatch_agent.j15.xml"/>
+                                <file name="mod_extrawatch_agent.php"/>
+                                <file name="mod_extrawatch_agent.xml"/>
+                            </dir>
+                            <dir name="mod_extrawatch_users">
+                                <file name="index.html"/>
+                                <file name="mod_extrawatch_users.j15.xml"/>
+                                <file name="mod_extrawatch_users.php"/>
+                                <file name="mod_extrawatch_users.xml"/>
+                            </dir>
+                            <dir name="mod_extrawatch_visitors">
+                                <file name="index.html"/>
+                                <file name="mod_extrawatch_visitors.j15.xml"/>
+                                <file name="mod_extrawatch_visitors.php"/>
+                                <file name="mod_extrawatch_visitors.xml"/>
+                            </dir>
+                        </dir>
+                    </dir>
+                    <dir name="Helper">
+                        <file name="Data.php"/>
+                    </dir>
+                    <dir name="Model">
+                        <file name="ExtraWatch.php"/>
+                        <dir name="Mysql4">
+                            <dir name="ExtraWatch">
+                                <file name="Collection.php"/>
+                            </dir>
+                            <file name="ExtraWatch.php"/>
+                        </dir>
+                        <file name="Status.php"/>
+                    </dir>
+                    <dir name="sql">
+                        <dir name="extrawatch_setup">
+                            <file name="mysql4-install-0.1.0.php"/>
+                        </dir>
+                    </dir>
+                </dir>
+            </dir>
+        </target>
+        <target name="magedesign">
+            <dir name="adminhtml">
+                <dir name="default">
+                    <dir name="default">
+                        <dir name="layout">
+                            <file name="extrawatch.xml"/>
+                        </dir>
+                        <dir name="template">
+                            <dir name="extrawatch">
+                                <file name="extrawatch.phtml"/>
+                            </dir>
+                        </dir>
+                    </dir>
+                </dir>
+            </dir>
+            <dir name="frontend">
+                <dir name="base">
+                    <dir name="default">
+                        <dir name="layout">
+                            <file name="extrawatch.xml"/>
+                        </dir>
+                        <dir name="template">
+                            <dir name="extrawatch">
+                                <file name="extrawatch.phtml"/>
+                                <file name="extrawatch-agent.phtml"/>
+                            </dir>
+                        </dir>
+                    </dir>
+                </dir>
+                <dir name="default">
+                    <dir name="default">
+                        <dir name="layout">
+                            <file name="extrawatch.xml"/>
+                        </dir>
+                        <dir name="template">
+                            <dir name="extrawatch">
+                                <file name="extrawatch.phtml"/>
+                                <file name="extrawatch-agent.phtml"/>
+                            </dir>
+                        </dir>
+                    </dir>
+                </dir>
+            </dir>
+        </target>
+        <target name="mageetc">
+            <dir name="modules">
+                <file name="CodeGravity_ExtraWatch.xml"/>
+            </dir>
+        </target>
+    </contents>
+    <compatible/>
+    <dependencies>
+        <required>
+            <php>
+                <min>1.0.0</min>
+                <max>6.0.0</max>
+            </php>
+        </required>
+    </dependencies>
+</package>

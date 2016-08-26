@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>extrawatch</name>
+    <version>1.2.18</version>
+    <stability>stable</stability>
+    <license>GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>ExtraWatch Module</summary>
+    <description>ExtraWatch Module.</description>
+    <notes></notes>
+    <authors><author><name>Dan Busch</name><user>auto-converted</user><email>dan@extrawatch.com</email></author></authors>
+    <date>2012-07-27</date>
+    <time>19:30:17</time>
+    <contents><target name="magelocal"><dir name="CodeGravity"><dir name="ExtraWatch"><dir name="Block"><dir name="Adminhtml"><dir name="Dashboard"><file name="Index.php" hash="2ebadc6d93b3d6469658e08e36525d3d"/></dir><dir name="SetApis"><dir name="Edit"><file name="Form.php" hash="ffb50c0a6fc6b87e58d0f85820730036"/></dir></dir><file name="PersonalAssistant.php" hash="45a4cc882bcfd36d6cf2e91850508b65"/><file name="SetApis.php" hash="d84967c89fd90203fa92f00481dbb6b2"/></dir></dir><dir name="Helper"><file name="Api.php" hash="4e5e8ad17630643f81144d3d0f14e930"/><file name="Config.php" hash="611a9cab40d2096be276587f1e573af0"/><file name="Data.php" hash="b8f91cf48eb0fa5a9c7d40c0f599f646"/></dir><dir name="Model"><file name="Observer.php" hash="0936d00bab1810e8d1bf0800d5278ffe"/><file name="Order.php" hash="c2031a97c0a81c1ca7b49f69c763edb2"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="AccountformController.php" hash="4ad8fedcd1e3883708667609c61a0394"/><file name="ApiController.php" hash="d12a0d8d37d5a9413bad155ecfd452e7"/></dir><file name="MetaController.php" hash="ba0aa200d1320ccf26f0209a79b424aa"/><file name="OrderController.php" hash="3f1a6fefc7499db4d4caf7f73c3f5034"/></dir><dir name="etc"><file name="config.xml" hash="09e880bd02600a4b89f98a2e3c357c60"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="extrawatch"><file name="dashboard.phtml" hash="3bdd5c5c8ef335b5b8602167c61b06dc"/><file name="dashboard_button.phtml" hash="e67180c64c25bb075306ee16594c1c13"/><file name="dashboard_create.phtml" hash="c07b74571082d6d784e8aaed2af46121"/><file name="dashboard_create_error.phtml" hash="1ad98c62519ffe43906e26fb184552a3"/><file name="dashboard_create_success.phtml" hash="48998aeb6c5d58a6843637ca0302f420"/><file name="dashboard_reconnect.phtml" hash="fe00f3b4a9d64bc41384a312842ecce7"/><file name="dashboard_reconnect_success.phtml" hash="ac07024d3a1755336c0588e168b9586b"/><file name="personal_assistant.phtml" hash="d993636a4bddf28b7d66a79ac51a18b7"/></dir></dir><dir name="layout"><file name="extrawatch.xml" hash="84cf63a56adf86aaeeeffb5cff20f3e7"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="CodeGravity_ExtraWatch.xml" hash="b287669362fdc94c54d0d7205c8ad2e1"/></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="extrawatch"><file name="extrawatch_account.css" hash="d6aff5327bd7d0dd157ea0efc372435d"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

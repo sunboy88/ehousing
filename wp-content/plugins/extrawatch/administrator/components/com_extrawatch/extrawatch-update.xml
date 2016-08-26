@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+
+    <updates>
+        <update>
+            <name>ExtraWatch</name>
+            <description>ExtraWatch</description>
+            <element>com_extrawatch</element>
+            <type>component</type>
+            <version>2.3.2650</version>
+            <downloads>
+                <downloadurl type="full" format="zip">http://www.extrawatch.com/update/extrawatch/2.3/FREE/com_extrawatch.zip</downloadurl>
+            </downloads>
+            <targetplatform name="joomla" version="3.[0123456789]"/>
+			<tags>
+				<tag>stable</tag>
+			</tags>
+			<section>Updates</section>
+			<client_id>1</client_id>
+			<folder></folder>
+        </update>
+     </updates>
+    <updates>
+        <update>
+            <name>ExtraWatch</name>
+            <description>ExtraWatch</description>
+            <element>com_extrawatch</element>
+            <type>component</type>
+            <version>2.3.2650</version>
+            <downloads>
+                <downloadurl type="full" format="zip">http://www.extrawatch.com/update/extrawatch/2.3/FREE/com_extrawatch.zip</downloadurl>
+            </downloads>
+            <targetplatform name="joomla" version="2.[0123456789]"/>
+			<tags>
+				<tag>stable</tag>
+			</tags>
+			<section>Updates</section>
+			<client_id>1</client_id>
+			<folder></folder>
+        </update>
+    </updates>
+
+</updates>

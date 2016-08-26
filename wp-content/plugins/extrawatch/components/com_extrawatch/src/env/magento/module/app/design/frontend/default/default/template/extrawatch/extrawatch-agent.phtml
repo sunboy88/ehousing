@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file
+ * ExtraWatch - A real-time ajax monitor and live stats
+ * @package ExtraWatch
+ * @version 2.1
+ * @revision 917
+ * @license http://www.gnu.org/licenses/gpl-3.0.txt     GNU General Public License v3
+ * @copyright (C) 2014 by CodeGravity.com - All rights reserved!
+ * @website http://www.extrawatch.com
+ */
+
+if (!defined("_JEXEC")) define("_JEXEC",1);
+if (!defined("ENV")) define("ENV",1);
+$pathSuffix = realpath(".").DS."app".DS."code".DS."community".DS."CodeGravity".DS."ExtraWatch".DS."extrawatch";
+
+$GLOBALS['extrawatch_page_title'] = $this->getLayout()->getBlock('head')->getTitle();
+
+if (!defined("JPATH_BASE")) {
+    define("JPATH_BASE", $pathSuffix);
+}
+require_once($pathSuffix.DS."modules".DS."mod_extrawatch_agent".DS."mod_extrawatch_agent.php");
+echo renderExtraWatchAgent();
+?>

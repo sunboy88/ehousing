@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install type="module" version="1.5.0" client="site">
+    <name>ExtraWatch Users Module</name>
+    <author>ExtraWatch FREE by CodeGravity.com - http://www.extrawatch.com</author>
+    <creationDate>2016</creationDate>
+    <copyright>www.extrawatch.com</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3</license>
+    <authorEmail>support@extrawatch.com</authorEmail>
+    <authorUrl>http://www.extrawatch.com</authorUrl>
+    <version>2.3.2650 FREE</version>
+    <description>
+        INSTRUCTIONS: This module allows to display the most active users and their total count for the current day in
+        the frontend.
+    </description>
+    <files>
+        <filename module="mod_extrawatch_users">mod_extrawatch_users.php</filename>
+    </files>
+    <params>
+        <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix"
+               description="PARAMMODULECLASSSUFFIX"/>
+    </params>
+</install>

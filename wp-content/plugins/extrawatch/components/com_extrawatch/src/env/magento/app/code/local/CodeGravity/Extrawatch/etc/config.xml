@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <CodeGravity_ExtraWatch>
+            <version>1.2.18</version>
+        </CodeGravity_ExtraWatch>
+    </modules>
+    <global>
+		<blocks>
+			<extrawatch>
+				<class>CodeGravity_ExtraWatch_Block</class>
+			</extrawatch>
+			<extrawatch_adminhtml>
+                <class>CodeGravity_ExtraWatch_Block_Adminhtml</class>
+            </extrawatch_adminhtml>
+		</blocks>
+        <helpers>
+            <extrawatch>
+            	<class>CodeGravity_ExtraWatch_Helper</class>
+            </extrawatch>
+        </helpers>
+		<models>
+            <extrawatch>
+                <class>CodeGravity_ExtraWatch_Model</class>
+            </extrawatch>
+        </models>
+    </global>
+	<admin>
+        <routers>
+            <extrawatch>
+                <use>admin</use>
+                <args>
+                    <module>CodeGravity_ExtraWatch</module>
+                    <frontName>extrawatch</frontName>
+                </args>
+            </extrawatch>
+        </routers>
+    </admin>
+	<adminhtml>
+		<menu>
+			<extrawatch translate="title" module="extrawatch">
+				<title>ExtraWatch</title>
+                <sort_order>200</sort_order>
+				<children>
+					<extrawatchlink translate="title" module="extrawatch">
+						<title>Live Stats</title>
+						<sort_order>0</sort_order>
+						<action>extrawatch/liveStats</action>
+					</extrawatchlink>
+					<extrawatch translate="title" module="extrawatch">
+                        <title>History</title>
+						<sort_order>1</sort_order>
+                        <action>extrawatch/history</action>
+					</extrawatch>
+				</children>
+            </extrawatch>
+        </menu>
+        <layout>
+            <updates>
+                <extrawatch>
+                    <file>extrawatch.xml</file>
+                </extrawatch>
+            </updates>
+        </layout>
+    </adminhtml>
+	<frontend>
+		<routers>
+            <extrawatch>
+                <use>standard</use>
+                <args>
+                    <module>CodeGravity_ExtraWatch</module>
+                    <frontName>extrawatch</frontName>
+                </args>
+            </extrawatch>
+        </routers>
+    </frontend>
+</config>

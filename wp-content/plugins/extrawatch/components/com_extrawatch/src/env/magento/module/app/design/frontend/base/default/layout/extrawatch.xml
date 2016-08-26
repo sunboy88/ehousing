@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @file
+ * ExtraWatch - A real-time ajax monitor and live stats
+ * @package ExtraWatch
+ * @version 2.1
+ * @revision 917
+ * @license http://www.gnu.org/licenses/gpl-3.0.txt     GNU General Public License v3
+ * @copyright (C) 2014 by CodeGravity.com - All rights reserved!
+ * @website http://www.extrawatch.com
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="right">
+            <block type="extrawatch/extraWatch" template="extrawatch/extrawatch.phtml" />
+        </reference>
+        <reference name="footer">
+            <block type="extrawatch/extraWatch" template="extrawatch/extrawatch-agent.phtml" />
+        </reference>
+    </default>
+</layout>

@@ -1,0 +1,5 @@
+[24-Jul-2016 10:53:26 UTC] PHP Fatal error:  Call to undefined function rwmb_meta() in /home/thuechun/public_html/wp-content/themes/realhomes/functions.php on line 482
+[24-Jul-2016 10:53:49 UTC] PHP Fatal error:  Call to undefined function rwmb_meta() in /home/thuechun/public_html/wp-content/themes/realhomes/functions.php on line 482
+[24-Jul-2016 10:56:02 UTC] PHP Fatal error:  Call to undefined function rwmb_meta() in /home/thuechun/public_html/wp-content/themes/realhomes/property-details/property-slider.php on line 3
+[15-Aug-2016 03:24:58 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/thuechun/public_html/wp-content/themes/realhomes/header.php on line 112
+[15-Aug-2016 03:25:36 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/thuechun/public_html/wp-content/themes/realhomes/header.php on line 112

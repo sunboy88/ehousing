@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @file
+ * ExtraWatch - A real-time ajax monitor and live stats
+ * @package ExtraWatch
+ * @version 2.1
+ * @revision 917
+ * @license http://www.gnu.org/licenses/gpl-3.0.txt     GNU General Public License v3
+ * @copyright (C) 2014 by CodeGravity.com - All rights reserved!
+ * @website http://www.extrawatch.com
+ */
+ -->
+<config>
+    <modules>
+        <CodeGravity_ExtraWatch>
+            <version>0.1.0</version>
+        </CodeGravity_ExtraWatch>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <extrawatch>
+                    <file>extrawatch.xml</file>
+                </extrawatch>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <extrawatch>
+                <use>admin</use>
+                <args>
+                    <module>CodeGravity_ExtraWatch</module>
+                    <frontName>extrawatch</frontName>
+                </args>
+            </extrawatch>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+            <extrawatch module="extrawatch">
+                <title>ExtraWatch</title>
+                <action>extrawatch/adminhtml_extrawatch</action>
+                <sort_order>999</sort_order>
+                <children>
+                    <extrawatchLiveStats translate="title" module="extrawatch">
+                        <title>Live Stats</title>
+                        <sort_order>1</sort_order>
+                        <action>extrawatch/adminhtml_extrawatch</action>
+                    </extrawatchLiveStats>
+					
+                    <extrawatchGraphs translate="title" module="extrawatch">
+                        <title>Graphs</title>
+                        <sort_order>5</sort_order>
+                        <action>extrawatch/adminhtml_extrawatch/graphs</action>
+                    </extrawatchGraphs>
+                    <extrawatchGoals translate="title" module="extrawatch">
+                        <title>Goals</title>
+                        <sort_order>6</sort_order>
+                        <action>extrawatch/adminhtml_extrawatch/goals</action>
+                    </extrawatchGoals>
+                    <extrawatchHistory translate="title" module="extrawatch">
+                        <title>History</title>
+                        <sort_order>7</sort_order>
+                        <action>extrawatch/adminhtml_extrawatch/history</action>
+                    </extrawatchHistory>
+                    <extrawatchAntiSpam translate="title" module="extrawatch">
+                        <title>Anti-Spam</title>
+                        <sort_order>8</sort_order>
+                        <action>extrawatch/adminhtml_extrawatch/antispam</action>
+                    </extrawatchAntiSpam>
+                    <extrawatchEmails translate="title" module="extrawatch">
+                        <title>Emails</title>
+                        <sort_order>9</sort_order>
+                        <action>extrawatch/adminhtml_extrawatch/emails</action>
+                    </extrawatchEmails>
+					
+                    <extrawatchSettings translate="title" module="extrawatch">
+                        <title>Settings</title>
+                        <sort_order>12</sort_order>
+                        <action>extrawatch/adminhtml_extrawatch/settings</action>
+                    </extrawatchSettings>
+                    <extrawatchCredits translate="title" module="extrawatch">
+                        <title>Credits</title>
+                        <sort_order>13</sort_order>
+                        <action>extrawatch/adminhtml_extrawatch/credits</action>
+                    </extrawatchCredits>
+                    <extrawatchLicense translate="title" module="extrawatch">
+                        <title>License</title>
+                        <sort_order>14</sort_order>
+                        <action>extrawatch/adminhtml_extrawatch/license</action>
+                    </extrawatchLicense>
+                </children>
+            </extrawatch>
+
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <CodeGravity_ExtraWatch>
+                            <title>ExtraWatch Module</title>
+                            <sort_order>10</sort_order>
+                        </CodeGravity_ExtraWatch>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <global>
+        <models>
+            <extrawatch>
+                <class>CodeGravity_ExtraWatch_Model</class>
+                <resourceModel>extrawatch_mysql4</resourceModel>
+            </extrawatch>
+            <extrawatch_mysql4>
+                <class>CodeGravity_ExtraWatch_Model_Mysql4</class>
+                <entities>
+                    <extrawatch>
+                        <table>extrawatch</table>
+                    </extrawatch>
+                </entities>
+            </extrawatch_mysql4>
+        </models>
+        <resources>
+            <extrawatch_setup>
+                <setup>
+                    <module>CodeGravity_ExtraWatch</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </extrawatch_setup>
+            <extrawatch_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </extrawatch_write>
+            <extrawatch_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </extrawatch_read>
+        </resources>
+        <blocks>
+            <extrawatch>
+                <class>CodeGravity_ExtraWatch_Block</class>
+            </extrawatch>
+        </blocks>
+        <helpers>
+            <extrawatch>
+                <class>CodeGravity_ExtraWatch_Helper</class>
+            </extrawatch>
+        </helpers>
+    </global>
+</config>
+

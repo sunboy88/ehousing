@@ -1,0 +1,184 @@
+<?php
+/**
+ * @file
+ * extrawatch.module
+ */
+
+/**
+ * Implements hook_menu()
+ */
+
+if (!defined('_JEXEC')) {
+  define('_JEXEC', 1);
+}
+if (!defined('ENV')) {
+  define('ENV', 1);
+}
+if (!defined('DS')) {
+  define('DS', DIRECTORY_SEPARATOR);
+}
+
+$drupalModulePath = extrawatch_getDrupalModulePath();;
+
+if (!defined('JPATH_BASE')) {
+  define('JPATH_BASE', $drupalModulePath);
+}
+if (!defined('JPATH_BASE2')) {
+  define('JPATH_BASE2', $drupalModulePath);
+}
+
+
+
+function extrawatch_menu()
+{
+  $items = array();
+
+  $items['admin/extrawatch'] = array(
+    'title' => t('ExtraWatch'),
+    'type' => MENU_NORMAL_ITEM,
+    'menu_name' => 'management',
+    'page callback' => 'extrawatch_content',
+    'cache' => DRUPAL_NO_CACHE,
+    'access arguments' => array('access content'),
+  );
+
+  return $items;
+}
+
+function extrawatch_content()
+{
+  // this is where the text for the page etc goes
+  require_once("administrator" . DS . "components" . DS . "com_extrawatch" . DS . "admin.extrawatch.php");
+  $output = extrawatch_mainController();
+
+  return $output;
+}
+
+/**
+ * Implements hook_block_info()
+ */
+function extrawatch_block_info()
+{
+
+  $blocks['module_1_txt'] = array(
+    'info' => t('ExtraWatch Agent'),
+    'cache' => DRUPAL_NO_CACHE,
+    'region' => 'content',
+    'weight' => 1,
+  );
+
+  $blocks['module_2_txt'] = array(
+    'info' => t('ExtraWatch Countries'),
+    'cache' => DRUPAL_NO_CACHE,
+    'region' => 'content',
+    'weight' => 2,
+
+  );
+
+  $blocks['module_3_txt'] = array(
+    'info' => t('ExtraWatch Visitors'),
+    'cache' => DRUPAL_NO_CACHE,
+    'region' => 'content',
+    'weight' => 3,
+
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view()
+ */
+function extrawatch_block_view($delta = '')
+{
+  // this is how the block works, we stick in a swich() to make it easier, than a if/else condition
+
+  $block = array(); // we love arrays in drupal
+
+  switch ($delta) {
+
+    case 'module_1_txt':
+
+      $block['subject'] = t('ExtraWatch agent');
+      $block['content'] = extrawatch_agent();
+
+      break;
+
+    case 'module_2_txt':
+      $block['subject'] = t('ExtraWatch users');
+      $block['content'] = extrawatch_users();
+
+      break;
+
+    case 'module_3_txt':
+      $block['subject'] = t('ExtraWatch visitors');
+      $block['content'] = extrawatch_visitors();
+
+      break;
+
+
+  }
+  return $block;
+}
+
+function extrawatch_agent()
+{
+  require_once(extrawatch_getDrupalModulePath(). DS. "modules" . DS . "mod_extrawatch_agent" . DS . "mod_extrawatch_agent.php");
+  return renderExtraWatchAgent();
+}
+
+function extrawatch_users()
+{
+  require_once(extrawatch_getDrupalModulePath(). DS. "modules" . DS . "mod_extrawatch_users" . DS . "mod_extrawatch_users.php");
+  return renderExtraWatchUsers();
+}
+
+function extrawatch_visitors()
+{
+  require_once(extrawatch_getDrupalModulePath(). DS. "modules" . DS . "mod_extrawatch_visitors" . DS . "mod_extrawatch_visitors.php");
+  return renderExtraWatchVisitors();
+}
+
+function extrawatch_enable()
+{
+  extrawatch_initialize_db(extrawatch_getDrupalModulePath());
+
+}
+
+function extrawatch_disable()
+{
+  echo("hook disable");
+}
+
+function extrawatch_initialize_db($drupalModulePath)
+{
+  require_once($drupalModulePath. DS. "components" . DS . "com_extrawatch" . DS . "includes.php");
+  require_once($drupalModulePath. DS. "administrator" . DS . "components" . DS . "com_extrawatch" . DS . "install.extrawatch.php");
+
+  $env = ExtraWatchEnvFactory::getEnvironment();
+  $env->getDatabase();
+
+  $lines = file($drupalModulePath . DS . "administrator" . DS . "components" . DS . "com_extrawatch" . DS . "sql" . DS . "install.mysql.utf8.sql");
+
+  $query = "";
+  foreach ($lines as $line_num => $line) {
+
+    $query .= trim($line);
+
+    if (strstr($line, ");")) {
+      $query = trim($query);
+      $query = str_replace("#__", $env->getDbPrefix(), $query);
+      $env->getDatabase()->executeQuery($query);
+      $query = "";
+    }
+
+  }
+
+  extrawatch_initialize_ip2country($drupalModulePath, $env->getDatabase());
+}
+
+function extrawatch_getDrupalModulePath() {
+  $drupalModulePathExtraWatch = realpath(".") . DS . "sites" . DS . "all" . DS . "modules" . DS . "extrawatch";
+  return $drupalModulePathExtraWatch;
+}
+

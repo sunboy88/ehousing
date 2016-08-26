@@ -1,0 +1,3 @@
+name = ExtraWatch
+description = Drupal port of popular JoomlaWatch live stats component. ExtraWatch is an AJAX component and module for Joomla CMS that allows you to watch your visitors and bots in real-time from the administration menu. Specially their IP addresses, countries they come from, which pages they are viewing, their browser and operating system, it creates daily and all-time stats from these information plus unique, pageload and total hits statistics. Furthermore, you can block harmful IP addresses and see blocked attempts stats.
+core = 7.x

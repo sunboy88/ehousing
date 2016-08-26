@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_dashboard_index>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>extrawatch/extrawatch_account.css</name></action>
+            <action method="addJs"><script>varien/form.js</script></action>
+        </reference>
+        <reference name="content">
+			      <block type="extrawatch/adminhtml_dashboard_index" name="extrawatch_dashboard_index" before="dashboard"/>
+        </reference>
+    </adminhtml_dashboard_index>
+</layout>

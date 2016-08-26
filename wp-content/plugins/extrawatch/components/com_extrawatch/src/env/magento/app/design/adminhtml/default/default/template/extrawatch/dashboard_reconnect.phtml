@@ -1,0 +1,66 @@
+<div class="content-header">
+    <h3 class="head-dashboard">Reconnect ExtraWatch Account</h3>
+</div>
+
+<div id="extrawatch_account_reconnect" class="extrawatch_account_reconnect">
+
+    <div class="extrawatch_reconnect_banner">
+        <h1>Let's reconnect your store to your ExtraWatch account.</h1>
+    </div>
+
+    <?php
+      $reconnect_error_msg = Mage::getSingleton('adminhtml/session')->getReconnectErrorMsgSessionVar();
+      if (!empty($reconnect_error_msg)) {
+        echo '<div id="error_response_message" class="error_response_message"><span>error response message</span> ' . $reconnect_error_msg . '</div>';
+        Mage::getSingleton('adminhtml/session')->unsReconnectErrorMsgSessionVar();
+      }
+    ?>
+
+    <div class="extrawatch_reconnect_content clearfix">
+        <form name="extrawatch_reconnectForm" method="post" id="extrawatch_reconnectForm" action="<? echo $this->getFormAction(); ?>" enctype="multipart/form-data">
+            <input type="hidden" name="form_key" value="<? echo $this->getFormKey(); ?>" />
+            <fieldset>
+                <div class="extrawatch_reconnect_initial extrawatch_form_1">
+                    <div class="create_act_field">
+                        <label>Email</label>
+                        <input type="email" id="email" name="email" value="" class="required-entry validate-email" tabindex="1" />
+                    </div>
+                    <div class="create_act_field">
+                        <label>Password</label>
+                        <input type="password" id="password" name="password" class="required-entry validate-password" tabindex="2" />
+                    </div>
+                </div>
+            </fieldset>
+            <div class="extrawatch_reconnect_submit blue_button"><button onclick="validate();" type="button" tabindex="3">Reconnect Account</button></div>
+            <div class="forgot_password"><a href="https://extrawatch.com/password/forgot" target="_blank">Forgot password?</a></div>
+        </form>
+    </div>
+
+    <div class="extrawatch_copy_wrapper">
+        <div class="extrawatch_header">
+            <h2>We <span class="love">&#9829;</span> answering questions.</h2>
+        </div>
+
+        <div class="extrawatch_copy">
+            <h3>Why do I have to go through this again?</h3>
+            <p>It seems as if your API key was disabled. All we'll need is your ExtraWatch credentials to reconnect your Magento Store with your account.</p>
+            <div class="email_us">
+                <h4>Email Us</h4>
+                <p>support@extrawatch.com</p>
+            </div>
+            <div class="call_us">
+                <h4>Call Us</h4>
+                <p>+1 917 719 0255</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    function validate() {
+        var postForm = new VarienForm('extrawatch_reconnectForm', true);
+        postForm.submit();
+    }
+</script>

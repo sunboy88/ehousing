@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- -->
+<config>
+    <modules>
+		<CodeGravity_ExtraWatch>
+            <active>true</active>
+            <codePool>local</codePool>
+        </CodeGravity_ExtraWatch>
+    </modules>
+</config>
